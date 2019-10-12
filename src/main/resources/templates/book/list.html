@@ -37,6 +37,14 @@
     <div style="padding-top:1em;" class="container">
         <div>
             <span style="font-size: 2em; color: #32a5e7;">Books in our Collection</span>
+
+            <form action="/elibrary/book/search" th:object="${book}" method="get" class="form-inline ml-auto"  >
+                <input class="form-control mr-sm-2" name = "bookTitle" type="text" placeholder="Book Title" >
+<!--                <input class="form-control" type="text" name="search" required placeholder="Book Title" aria-label="bookTitle">-->
+<!--                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>-->
+                <button  class="btn btn-outline-white btn-md my-0 ml-sm-2" type="submit">Search</button>
+            </form>
+
             <span style="float:right;">
                 <a class="btn btn-outline-success btn-lg" href="/elibrary/book/new">Add New Book</a>
             </span>

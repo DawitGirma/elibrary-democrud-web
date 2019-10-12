@@ -34,6 +34,12 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
+    public Page<Book> searchBooksPaged(String bookTitle,int pageNo) {
+        return repository.findBookBytitle(bookTitle,PageRequest.of(pageNo, 3));
+
+    }
+
+    @Override
     public Book saveBook(Book book) {
         return repository.save(book);
     }
